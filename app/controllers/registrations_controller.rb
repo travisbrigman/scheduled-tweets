@@ -3,10 +3,15 @@ class RegistrationsController < ApplicationController
     @user = User.new
   end
 
+  # def create
+  #   render plain: params[:password]
+  # end
+
   def create
     # uses the private method below to create the new User in the db.
     @user = User.new(user_params)
     if @user.save
+      session[:user_id] = @user.id
       redirect_to root_path, notice: 'Successfully created account'
     else
       render :new
