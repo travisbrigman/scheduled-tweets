@@ -16,7 +16,7 @@
             <ul class="navbar-nav mb-2 ms-auto mb-lg-0">
                 <% if Current.user %>
                 <li class="nav-item">
-                    <span class="navbar-text"><%=  Current.user.email %><span>
+                    <%= link_to Current.user.email, edit_password_path, class: 'nav-link' %>
                 </li>
                 <li class="nav-item" >
                     <%= button_to "Log Out", logout_path, method: :delete  %>
