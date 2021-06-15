@@ -15,5 +15,13 @@
         "titleBar.inactiveBackground": "#7b462099",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#7b4620"
+    "peacock.color": "#7b4620",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Scheduled Tweets",
+            "database": "${workspaceFolder:scheduled_tweets}/db/development.sqlite3"
+        }
+    ]
 }
