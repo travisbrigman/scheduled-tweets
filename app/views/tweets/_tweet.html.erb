@@ -1,0 +1,9 @@
+<div class="mb-4 card card-body">
+  <%= tweet.body %>
+  <div class="me-4">
+    <%= image_tag tweet.twitter_account.image, class: 'rounded-circle' %>
+    <%= link_to "@#{tweet.twitter_account.username}", "https://twitter.com/#{tweet.twitter_account.username}", target: :_blank %>
+  <% if tweet.published? %>
+    <%= link_to "View Tweet", "", target: :_blank %>
+  </div>
+</div>
