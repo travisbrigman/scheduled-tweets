@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
   before_action :require_user_logged_in!
-  before_action :set_tweet, only: [:edit, :update, :show, :destory]
+  before_action :set_tweet, only: [:edit, :update, :show, :destroy]
+  
   def index
     @tweets = Current.user.tweets
   end
@@ -19,7 +20,6 @@ class TweetsController < ApplicationController
   end
 
   def edit
-    
   end
 
   def update
